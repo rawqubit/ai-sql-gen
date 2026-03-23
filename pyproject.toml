@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-sql-gen"
+version = "1.0.0"
+description = "AI-powered SQL query generator from natural language."
+license = {text = "MIT"}
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.scripts]
+ai-sql-gen = "ai_sql_gen.main:cli"
+
+[tool.setuptools.packages.find]
+include = ["ai_sql_gen*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
